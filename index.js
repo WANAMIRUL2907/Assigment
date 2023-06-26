@@ -104,7 +104,7 @@ run().catch(console.error);
 function generateToken(userProfile){
   return jwt.sign(
   userProfile,    //this is an obj
-  'mypassword',           //password
+  'dinpass',           //password
   { expiresIn: '2h' });  //expires after 2 hour
 }
 
@@ -427,7 +427,7 @@ function verifyToken(req, res, next) {
 
   let token = header.split(' ')[1];
 
-  jwt.verify(token, 'mypassword', function(err, decoded) {
+  jwt.verify(token, 'dinpass', function(err, decoded) {
     if (err) {
       console.error(err);
       return res.status(401).send('Invalid token');
