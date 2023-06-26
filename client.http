@@ -66,11 +66,9 @@ Authorization: Bearer
 
 
 
-
 ###
 POST http://localhost:3000/registerVisitor
-Authorization: Bearer 
-Content-Type: application/json
+Authorization: Bearer Content-Type: application/json
 
 {
     "username":"azizul12",
@@ -88,7 +86,7 @@ POST http://localhost:3000/loginVisitor
 Content-Type: application/json
 
 {
-    "username":"azizul123",
+    "username":"azizul12",
     "password":"1234"
 }
 
@@ -103,7 +101,7 @@ Authorization: Bearer
 Content-Type: application/json
 
 {
-    "recordID":"Record002",
+    "recordID":"Record003",
     "purpose":"Bidding"
 }
 

@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const app = express();
 const port = 3000;
 const saltRounds = 10;
-const uri = "mongodb://172.20.75.119:27017/";
+const uri = "mongodb+srv://deenbrembo:hafizudin202@cluster0.vlncwtu.mongodb.net/";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -307,7 +307,7 @@ async function deleteUser(client, data) {
     { $pull: { visitors: data.username } }
   );
 
-  return "Delete Successful";
+  return "Delete Successful\nthe records of the user have been deleted too";
 }
 
 
