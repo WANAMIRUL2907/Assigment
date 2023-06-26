@@ -19,7 +19,7 @@ Content-Type: application/json
     "password":"1234"
 }
 
-###
+###giy
 GET http://localhost:3000/readAdmin
 Authorization: Bearer 
 
@@ -73,7 +73,7 @@ Authorization: Bearer
 Content-Type: application/json
 
 {
-    "username":"azizul123",
+    "username":"azizul12",
     "password":"1234",
     "name":"Mr Azizul Hakim",
     "icNumber":"020406082207",
