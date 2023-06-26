@@ -72,14 +72,14 @@ Authorization: Bearer
 Content-Type: application/json
 
 {
-    "username":"azizul12",
+    "username":"imran123",
     "password":"1234",
-    "name":"Mr Azizul Hakim",
-    "icNumber":"020406082207",
-    "company":"AZ Company",
-    "vehicleNumber":"BMK1234",
-    "email":"jijul@gmail.com",
-    "phoneNumber":"0131101015"  
+    "name":"Mr Imran",
+    "icNumber":"020308081029",
+    "company":"IM Company",
+    "vehicleNumber":"KKM1234",
+    "email":"imran@gmail.com",
+    "phoneNumber":"0145012337"  
 }
 
 ###
@@ -87,7 +87,7 @@ POST http://localhost:3000/loginVisitor
 Content-Type: application/json
 
 {
-    "username":"azizul12",
+    "username":"imran123",
     "password":"1234"
 }
 

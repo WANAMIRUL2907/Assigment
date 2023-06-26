@@ -248,7 +248,7 @@ async function read(client, data) {
     }
 
     const Visitors = await client.db('assigment').collection('Users').find({ Security: data.username }).toArray();
-    const Records = await client.db('assigment').collection('Records').find({ username: { $in: Security.visitors } }).toArray();
+    const Records = await client.db('assigment').collection('Records').find().toArray();
 
     return { Security, Visitors, Records };
   }
@@ -291,6 +291,7 @@ async function update(client, data, mydata) {
 async function deleteUser(client, data) {
   const usersCollection = client.db("assigment").collection("Users");
   const recordsCollection = client.db("assigment").collection("Records");
+  const securityCollection = client.db("assigment").collection("Security");
 
   // Delete user document
   const deleteResult = await usersCollection.deleteOne({ username: data.username });
@@ -298,17 +299,21 @@ async function deleteUser(client, data) {
     return "User not found";
   }
 
-  // Delete related records
-  await recordsCollection.deleteMany({ username: data.username });
-
   // Update visitors array in other users' documents
   await usersCollection.updateMany(
     { visitors: data.username },
     { $pull: { visitors: data.username } }
   );
 
-  return "Delete Successful\nthe records of the user have been deleted too";
+  // Update visitors array in the Security collection
+  await securityCollection.updateMany(
+    { visitors: data.username },
+    { $pull: { visitors: data.username } }
+  );
+
+  return "Delete Successful\nThe user document and related visitor references have been removed";
 }
+
 
 
 
