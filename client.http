@@ -1,0 +1,133 @@
+POST http://localhost:3000/registerAdmin
+Content-Type: application/json
+
+{
+    "username":"Admin",
+    "password":"1234",
+    "name":"CEO Deen",
+    "email":"Deen@gmail.com",
+    "phoneNumber":"0123456789",
+    "role":"Admin"
+}
+
+###
+POST http://localhost:3000/loginAdmin
+Content-Type: application/json
+
+{
+    "username":"Admin",
+    "password":"1234"
+}
+
+###
+GET http://localhost:3000/readAdmin
+Authorization: Bearer 
+
+
+
+
+
+
+
+
+
+
+###
+POST http://localhost:3000/registerSecurity
+Authorization: Bearer 
+Content-Type: application/json
+
+{
+    "username":"Security001",
+    "password":"1234",
+    "name":"Mr Amirul",
+    "email":"amirul@gmail.com",
+    "phoneNumber":"0123456789"
+}
+
+###
+POST http://localhost:3000/loginSecurity
+Content-Type: application/json 
+
+{
+    "username":"Security001",
+    "password":"1234"
+}
+
+###
+GET http://localhost:3000/readSecurity
+Authorization: Bearer 
+
+
+
+
+
+
+
+
+
+
+###
+POST http://localhost:3000/registerVisitor
+Authorization: Bearer 
+Content-Type: application/json
+
+{
+    "username":"azizul123",
+    "password":"1234",
+    "name":"Mr Azizul Hakim",
+    "icNumber":"020406082207",
+    "company":"AZ Company",
+    "vehicleNumber":"BMK1234",
+    "email":"jijul@gmail.com",
+    "phoneNumber":"0131101015"  
+}
+
+###
+POST http://localhost:3000/loginVisitor
+Content-Type: application/json
+
+{
+    "username":"azizul123",
+    "password":"1234"
+}
+
+###
+GET http://localhost:3000/readVisitor
+Authorization: Bearer 
+
+
+###
+POST http://localhost:3000/checkIn
+Authorization: Bearer 
+Content-Type: application/json
+
+{
+    "recordID":"Record003",
+    "purpose":"Bidding"
+}
+
+###
+PATCH http://localhost:3000/checkOut
+Authorization: Bearer 
+
+
+###
+PATCH http://localhost:3000/updateVisitor
+Authorization: Bearer 
+Content-Type: application/json 
+    
+    {
+        "password":"1234",
+        "name":"Mr Azizul Hakim",
+        "icNumber":"020406082207",
+        "company":"AZ Company",
+        "vehicleNumber":"WYF1313",
+        "email":"jijul@gmail.com",
+        "phoneNumber":"0131101015"
+    }
+
+
+###
+DELETE http://localhost:3000/deleteVisitor
+Authorization: Bearer 
