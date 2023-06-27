@@ -102,7 +102,7 @@ Authorization: Bearer
 Content-Type: application/json
 
 {
-    "recordID":"Record003",
+    "recordID":"Record001",
     "purpose":"Bidding"
 }
 
@@ -118,11 +118,11 @@ Content-Type: application/json
     
     {
         "password":"1234",
-        "name":"Mr Azizul Hakim",
-        "icNumber":"020406082207",
-        "company":"AZ Company",
-        "vehicleNumber":"WYF1313",
-        "email":"jijul@gmail.com",
+        "name":"Mr Imran",
+        "icNumber":"020308081029",
+        "company":"IM Company",
+        "vehicleNumber":"BMK1234",
+        "email":"Imran@gmail.com",
         "phoneNumber":"0131101015"
     }
 

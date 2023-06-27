@@ -146,10 +146,12 @@ async function login(client, data) {
     const isPasswordMatch = await decryptPassword(data.password, match.password);
 
     if (isPasswordMatch) {
+      console.clear(); // Clear the console
       const token = generateToken(match);
-      console.log("\nToken for " + match.name + ": " + token);
-      return output(match.role);
-    } else {
+      console.log(output(match.role));
+      return "\nToken for " + match.name + ": " + token;
+    }
+     else {
       return "Wrong password";
     }
   } else {
@@ -311,7 +313,7 @@ async function deleteUser(client, data) {
     { $pull: { visitors: data.username } }
   );
 
-  return "Delete Successful\nThe user document and related visitor references have been removed";
+  return "Delete Successful\nBut the records are still in the database";
 }
 
 
